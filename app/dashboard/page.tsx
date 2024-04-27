@@ -1,5 +1,4 @@
 "use client";
-// import Cards from "@/components/card";
 import api from "@/service/api";
 import { useQuery } from "@tanstack/react-query";
 import GlobalCard from "@/components/globalcard";
@@ -9,10 +8,12 @@ import CustomizedGrid from "@/customizedStyle/CustomizedGrid";
 
 interface AnimeCards {
   id: string;
-  title: string;
+  title: {
+    romaji: string; // Assuming 'title' has a 'romaji' property
+  };
   image: string;
   url: string;
-  key: any;
+  key:any
 }
 
 export default function Dashboard() {

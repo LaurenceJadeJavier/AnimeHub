@@ -1,18 +1,9 @@
 "use client";
-import api from "@/service/api";
-import { useQuery, useIsFetching } from "@tanstack/react-query";
-import { get } from "http";
 import { useRouter } from "next/navigation";
 import imgaes from "../assets/animes.gif";
 import movies from "../assets/images.gif";
 import Image from "next/image"; 
 
-interface Anime {
-  // userId: number;
-  id: number;
-  title: string;
-  // completed: boolean;
-}
 
 export default function Home() {
   const router = useRouter();
