@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import GlobalCard from "@/components/globalcard";
 import useAnimeStore from "@/service/store";
 import { useRouter } from "next/navigation";
+import CustomizedGrid from "@/customizedStyle/CustomizedGrid";
 
 interface AnimeCards {
   id: string;
@@ -77,7 +78,7 @@ export default function Dashboard() {
   return (
     <>
       {/*  */}
-      <div className="p-5 grid grid-cols-5 bg-slate-500 ">
+      <CustomizedGrid>
         {animejjk?.map((item: any) => (
           <GlobalCard
             imageUrl={item?.image}
@@ -90,7 +91,7 @@ export default function Dashboard() {
             id={item?.title.romaji}
           />
         ))}
-      </div>
+      </CustomizedGrid>
     </>
   );
 }

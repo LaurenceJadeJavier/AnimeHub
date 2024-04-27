@@ -6,6 +6,7 @@ import GlobalCard from "@/components/globalcard";
 import api from "@/service/api";
 import { useRouter } from "next/navigation";
 import NotFound from "@/app/not-found";
+import CustomizedGrid from "@/customizedStyle/CustomizedGrid";
 
 export default function Anime() {
   const router = useRouter();
@@ -49,7 +50,7 @@ export default function Anime() {
 
   return (
     <>
-      <div className="p-2 grid grid-cols-5 bg-slate-500">
+      <CustomizedGrid>
         {Anime?.map((episode: any) => (
           <GlobalCard
             imageUrl={episode?.image}
@@ -63,7 +64,7 @@ export default function Anime() {
             }
           />
         ))}
-      </div>
+      </CustomizedGrid  >
     </>
   );
 }
